@@ -11,19 +11,24 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-button size="block">1</ion-button>
+        <ion-title >VALENDO: {{valendo}}</ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="valendo1()" size="block">1</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button size="block">3</ion-button>
+        <ion-button  (click)="valendo3()" size="block">3</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button size="block">6</ion-button>
+        <ion-button  (click)="valendo6()" size="block">6</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button size="block">9</ion-button>
+        <ion-button (click)="valendo9()" size="block">9</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button size="block">12</ion-button>
+        <ion-button  (click)="valendo12()" size="block">12</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -36,14 +41,14 @@
         <ion-row class="center">
           <ion-label>Time 1</ion-label>
         </ion-row>
-        <ion-button>+</ion-button>
+        <ion-button (click)="somaTimeUm()">+</ion-button>
       </ion-col>
 
       <ion-col >
         <ion-row class="center">
           <ion-label>Time 2</ion-label>
         </ion-row>
-        <ion-button>+</ion-button>
+        <ion-button (click)="somaTimeDois()">+</ion-button>
       </ion-col>
 
     </ion-row>
@@ -54,22 +59,22 @@
 
       <ion-col >
         <ion-row class="center">
-          <ion-label>0</ion-label>
+          <ion-label>{{ptime1}}</ion-label>
         </ion-row>
-        <ion-button>-</ion-button>
+        <ion-button (click)="subTimeUm()">-</ion-button>
       </ion-col>
 
       <ion-col  >
         <ion-row class="center">
-          <ion-label>0</ion-label>
+          <ion-label>{{ptime2}}</ion-label>
         </ion-row>
-        <ion-button>-</ion-button>
+        <ion-button (click)="subTimeDois()">-</ion-button>
       </ion-col>
 
     </ion-row>
   </ion-grid>
 
-  <ion-button size="block"> 
+  <ion-button (click)="zerar()" size="block">
     ZERAR
   </ion-button>
 
@@ -84,7 +89,7 @@
       </ion-col>
 
       <ion-col>
-        <ion-label>0</ion-label>
+        <ion-label>{{time1}}</ion-label>
       </ion-col>
     </ion-row>
 
@@ -94,7 +99,7 @@
       </ion-col>
 
       <ion-col>
-        <ion-label>0</ion-label>
+        <ion-label>{{time2}}</ion-label>
       </ion-col>
     </ion-row>
   </ion-grid>
