@@ -16,41 +16,24 @@ export class Tab2Page {
   time1 = 0;
   time2 = 0;
 
-  handlerMessage = '';
-  roleMessage = '';
-
   constructor(private alertController: AlertController) {}
 
 
-  async mostrarTruco() {
+  async mostrarTruco(message ='') {
     const alert = await this.alertController.create({
-      header: 'Truco marreco!',
-      buttons: [
-        {
-          text: 'OK',
-          role: 'confirm',
-        },
-      ],
+      header: 'Truco marreco',
+      buttons: ['OK'],
     });
-
-    await alert.present();
+      await alert.present();
   }
 
   async pecaSeis() {
     const alert = await this.alertController.create({
-      header: 'Pede seis seu ruim!',
-      buttons: [
-        {
-          text: 'OK',
-          role: 'confirm',
-        },
-      ],
+      header: 'Pede seis seu ruim',
+      buttons: ['OK'],
     });
-
-    await alert.present();
+      await alert.present();
   }
-
-
 
   valendo1(){
     this.valendo = 1;
@@ -58,10 +41,10 @@ export class Tab2Page {
 
   valendo3(){
     if(this.valendo >= 3){
-      this.pecaSeis();
+      this.pecaSeis()
     }else{
-      this.mostrarTruco();
       this.valendo = 3;
+      this.mostrarTruco()
     }
   }
 
@@ -99,9 +82,16 @@ export class Tab2Page {
 
   subTimeUm(){
     this.ptime1 -= this.valendo;
+    if(this.ptime1 < 0){
+      this.ptime1 = 0
+    }
   }
+
   subTimeDois(){
     this.ptime2 -= this.valendo;
+    if(this.ptime2 < 0){
+      this.ptime2 = 0
+    }
   }
 
   zerar(){
@@ -111,7 +101,4 @@ export class Tab2Page {
     this.ptime2 = 0;
     this.valendo = 1;
   }
-
-
-
 }
