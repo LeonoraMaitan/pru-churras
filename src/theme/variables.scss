@@ -3,6 +3,16 @@
 
 /** Ionic CSS Variables **/
 :root {
+
+  /** Lanranjinha **/
+
+  --ion-color-laranjinha: #F17935;
+	--ion-color-laranjinha-rgb: 241,121,53;
+	--ion-color-laranjinha-contrast: #000000;
+	--ion-color-laranjinha-contrast-rgb: 0,0,0;
+	--ion-color-laranjinha-shade: #d46a2f;
+	--ion-color-laranjinha-tint: #f28649;
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -233,4 +243,13 @@
 
     --ion-card-background: #1e1e1e;
   }
+}
+
+.ion-color-laranjinha {
+	--ion-color-base: var(--ion-color-laranjinha);
+	--ion-color-base-rgb: var(--ion-color-laranjinha-rgb);
+	--ion-color-contrast: var(--ion-color-laranjinha-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-laranjinha-contrast-rgb);
+	--ion-color-shade: var(--ion-color-laranjinha-shade);
+	--ion-color-tint: var(--ion-color-laranjinha-tint);
 }

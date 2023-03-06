@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="laranjinha">
     <ion-title>
       Truco
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
- <ion-card>
+<ion-content  color="dark" [fullscreen]="true">
+
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -16,19 +16,19 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button (click)="valendo1()" size="block">1</ion-button>
+        <ion-button  color="laranjinha" laranjinha (click)="valendo1()" size="block">1</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button  (click)="valendo3()" size="block">3</ion-button>
+        <ion-button color="laranjinha"  (click)="valendo3()" size="block">3</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button  (click)="valendo6()" size="block">6</ion-button>
+        <ion-button  color="laranjinha" (click)="valendo6()" size="block">6</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button (click)="valendo9()" size="block">9</ion-button>
+        <ion-button color="laranjinha" (click)="valendo9()" size="block">9</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button  (click)="valendo12()" size="block">12</ion-button>
+        <ion-button color="laranjinha"  (click)="valendo12()" size="block">12</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -38,17 +38,17 @@
     <ion-row>
 
       <ion-col >
-        <ion-row class="center">
+        <ion-row >
           <ion-label>Time 1</ion-label>
         </ion-row>
-        <ion-button (click)="somaTimeUm()">+</ion-button>
+        <ion-button  color="laranjinha"(click)="somaTimeUm()">+</ion-button>
       </ion-col>
 
       <ion-col >
-        <ion-row class="center">
+        <ion-row>
           <ion-label>Time 2</ion-label>
         </ion-row>
-        <ion-button (click)="somaTimeDois()">+</ion-button>
+        <ion-button  color="laranjinha"(click)="somaTimeDois()">+</ion-button>
       </ion-col>
 
     </ion-row>
@@ -58,23 +58,23 @@
     <ion-row>
 
       <ion-col >
-        <ion-row class="center">
+        <ion-row >
           <ion-label>{{ptime1}}</ion-label>
         </ion-row>
-        <ion-button (click)="subTimeUm()">-</ion-button>
+        <ion-button color="laranjinha" (click)="subTimeUm()">-</ion-button>
       </ion-col>
 
       <ion-col  >
-        <ion-row class="center">
+        <ion-row >
           <ion-label>{{ptime2}}</ion-label>
         </ion-row>
-        <ion-button (click)="subTimeDois()">-</ion-button>
+        <ion-button  color="laranjinha"(click)="subTimeDois()">-</ion-button>
       </ion-col>
 
     </ion-row>
   </ion-grid>
 
-  <ion-button (click)="zerar()" size="block">
+  <ion-button  color="laranjinha"(click)="zerar()" size="block">
     ZERAR
   </ion-button>
 
@@ -104,5 +104,5 @@
     </ion-row>
   </ion-grid>
 
- </ion-card>
+ 
 </ion-content>

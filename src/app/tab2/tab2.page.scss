@@ -1,8 +1,14 @@
-*{
+ion-content{
+    padding: 0;
+    margin: 0;
     text-align: center;
 }
 
-.center{
-    display: grid;
+ion-row{
     justify-content: center;
 }
+
+ion-title{
+    text-align: center;
+}
+
