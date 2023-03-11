@@ -19,33 +19,13 @@ export class Tab2Page {
   constructor(private alertController: AlertController) {}
 
 
-  async mostrarTruco(message ='') {
-    const alert = await this.alertController.create({
-      header: 'Truco marreco',
-      buttons: ['OK'],
-    });
-      await alert.present();
-  }
-
-  async pecaSeis() {
-    const alert = await this.alertController.create({
-      header: 'Pede seis seu ruim',
-      buttons: ['OK'],
-    });
-      await alert.present();
-  }
-
+ 
   valendo1(){
     this.valendo = 1;
   }
 
   valendo3(){
-    if(this.valendo >= 3){
-      this.pecaSeis()
-    }else{
-      this.valendo = 3;
-      this.mostrarTruco()
-    }
+    this.valendo = 3
   }
 
   valendo6(){
